@@ -46,6 +46,7 @@
     </style>
 
     <style name="ButtonStyle" parent="ImageStyle2">
+        <item name="android:padding">10dp</item>
         <item name="minWidth">0dp</item>
         <item name="minHeight">0dp</item>
         <item name="android:scaleType">fitCenter</item>
