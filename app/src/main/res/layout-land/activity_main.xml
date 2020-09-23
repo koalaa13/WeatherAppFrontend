@@ -14,57 +14,85 @@
         android:layout_height="wrap_content"
         android:text="@string/title_string"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/title_bottom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/weather_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/weather_image_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/weather_image_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/main_info_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
 
     <ImageView
         android:id="@+id/weather_image"
         style="@style/ImageStyle1"
-        android:layout_width="200dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/cloud"
-        app:layout_constraintBottom_toTopOf="@id/weather_image_bottom"
-        app:layout_constraintEnd_toEndOf="@id/humidity_info_start"
-        app:layout_constraintStart_toStartOf="@id/wind_info_end"
-        app:layout_constraintTop_toBottomOf="@+id/weather_image_top" />
+        app:layout_constraintBottom_toTopOf="@id/main_info_bottom"
+        app:layout_constraintEnd_toEndOf="@id/weather_image_end"
+        app:layout_constraintStart_toStartOf="@id/weather_image_start"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <TextView
         android:id="@+id/temperature"
         style="@style/MainInfoStyle"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/temperature"
         android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@id/geo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weather_image_bottom"
+        app:layout_constraintEnd_toEndOf="@id/main_info_end"
+        app:layout_constraintStart_toStartOf="@id/weather_image_end"
+        app:layout_constraintTop_toBottomOf="@id/title_bottom"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/geo"
         style="@style/MainInfoStyle"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/geo"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/weather_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/main_info_end"
+        app:layout_constraintStart_toStartOf="@id/weather_image_end"
         app:layout_constraintTop_toBottomOf="@id/temperature" />
 
     <TextView
         android:id="@+id/weather_name"
         style="@style/MainInfoStyle"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/weather_name"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/main_info_bottom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/main_info_end"
+        app:layout_constraintStart_toStartOf="@id/weather_image_end"
         app:layout_constraintTop_toBottomOf="@id/geo" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -258,23 +286,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.80" />
-
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/weather_image_top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.06" />
-
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/weather_image_bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.35" />
+        app:layout_constraintGuide_percent="0.77" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/week_weather_bottom"
@@ -498,8 +510,8 @@
         app:layout_constraintTop_toBottomOf="@id/buttons" />
 
     <ImageButton
-        style="@style/ButtonStyle"
         android:id="@+id/settings_button"
+        style="@style/ButtonStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/settings"
@@ -510,8 +522,8 @@
 
 
     <ImageButton
-        style="@style/ButtonStyle"
         android:id="@+id/apps_button"
+        style="@style/ButtonStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/app"
@@ -521,8 +533,8 @@
         app:layout_constraintTop_toBottomOf="@id/buttons" />
 
     <ImageButton
-        style="@style/ButtonStyle"
         android:id="@+id/geo_button"
+        style="@style/ButtonStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/placeholder"
@@ -530,7 +542,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/apps_button"
         app:layout_constraintTop_toBottomOf="@id/buttons" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
