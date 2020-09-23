@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">WeatherAppFrontend</string>
+    <string name="title_string">Weather</string>
+    <string name="temperature">32°C</string>
+    <string name="geo">LONDON, UK</string>
+    <string name="weather_name">CLOUDY</string>
+    <string name="wind_data">78</string>
+    <string name="perception_data">52</string>
+    <string name="wind_title">Wind Flow</string>
+    <string name="humidity_data">89</string>
+    <string name="humidity_title">Humidity</string>
+    <string name="perception_title">Perception</string>
+    <string name="weather_day1">Sunny</string>
+    <string name="weather_day1_time">7PM</string>
+    <string name="weather_day2">Rainy</string>
+    <string name="weather_day2_time">5AM</string>
+    <string name="weather_day3">Windy</string>
+    <string name="weather_day3_time">10PM</string>
+    <string name="weather_day4">Rainbow</string>
+    <string name="weather_day4_time">8AM</string>
+    <string name="weather_day5">Snowy</string>
+    <string name="weather_day5_time">11PM</string>
+</resources>
